@@ -2,13 +2,10 @@
 
 A site where users can attend events created by others users, give reviews for those events, and come together to discuss topics such as movies, technology, books and much more.
 
-- [FanCrowd](#fancrowd)
-  - [What app looks like](#what-app-looks-like)
-  - [Features](#features)
-  - [Dependencies](#dependencies)
-  - [Running locally](#running-locally)
-    - [Backend](#backend)
-    - [Frontend](#frontend)
+- [What app looks like](#what-app-looks-like)
+- [Features](#features)
+- [Dependencies](#dependencies)
+- [Running locally](#running-locally)
 
 ## What app looks like
 
