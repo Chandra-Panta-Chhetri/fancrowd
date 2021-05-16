@@ -3,7 +3,6 @@ import cors from "cors";
 import routes from "../api";
 import config from "../config";
 import passport from "passport";
-import path from "path";
 
 export default async ({ app }: { app: express.Application }) => {
   app.enable("trust proxy");
@@ -16,8 +15,8 @@ export default async ({ app }: { app: express.Application }) => {
   app.use(passport.session());
   await require("../config/passport").default(passport);
 
-  //Catches 404 api routes
-  app.use(`${config.api.prefix}/*`, (req, res, next) => {
+  //Catches 404 routes
+  app.use((req, res, next) => {
     const err = new Error(
       `${req.method} request to ${req.originalUrl} does not exist!`
     );
@@ -25,17 +24,6 @@ export default async ({ app }: { app: express.Application }) => {
     err.name = "NotFoundError";
     next(err);
   });
-
-  if (config.env === "production") {
-    app.use(
-      express.static(path.join(__dirname, "../../client/dist/csc309-project"))
-    );
-    app.get("*", (req, res) =>
-      res.sendFile(
-        path.join(__dirname, "../../client/dist/csc309-project/index.html")
-      )
-    );
-  }
 
   //Handles errors in endpoints
   app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
@@ -49,6 +37,7 @@ export default async ({ app }: { app: express.Application }) => {
     } else if (err.name === "NotFoundError") {
       return res.status(404).send({ message: err.message }).end();
     }
+    console.log(err);
     res.status(500).send({ message: "Internal Server Error" }).end();
   });
 };
