@@ -1,9 +1,4 @@
-import {
-  IAttendEvent,
-  IFandomMember,
-  IUser,
-  IUserLike
-} from "../interfaces/IUser";
+import { IAttendEvent, IFandomMember, IUser, IUserLike } from "../interfaces/IUser";
 import mongoose from "mongoose";
 import bcrypt from "bcryptjs";
 
@@ -18,19 +13,13 @@ import FandomMemberModel from "../models/fandom-member";
 import FandomCommentModel from "../models/fandom-comment";
 import UserLikeModel from "../models/user-like";
 
-import {
-  IFandom,
-  IFandomCategory,
-  IFandomComment,
-  IFandomPost
-} from "../interfaces/IFandom";
+import { IFandom, IFandomCategory, IFandomComment, IFandomPost } from "../interfaces/IFandom";
 import { IEvent, IEventReview } from "../interfaces/IEvent";
 
 const users: IUser[] = [
   {
     _id: new mongoose.Types.ObjectId(),
-    bio:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     city: "Toronto",
     country: "Canada",
     email: "chandra.panta345@hotmail.com",
@@ -44,8 +33,7 @@ const users: IUser[] = [
   },
   {
     _id: new mongoose.Types.ObjectId(),
-    bio:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     city: "Toronto",
     country: "Canada",
     email: "raj@gmail.com",
@@ -59,8 +47,7 @@ const users: IUser[] = [
   },
   {
     _id: new mongoose.Types.ObjectId(),
-    bio:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     city: "Toronto",
     country: "Canada",
     email: "jihee@gmail.com",
@@ -76,8 +63,7 @@ const users: IUser[] = [
 const fandomCategories: IFandomCategory[] = [
   {
     _id: new mongoose.Types.ObjectId(),
-    backgroundURL:
-      "https://i.pinimg.com/originals/51/c2/2e/51c22e9f59f506d283c1b07fa92e9a93.jpg",
+    backgroundURL: "https://i.pinimg.com/originals/51/c2/2e/51c22e9f59f506d283c1b07fa92e9a93.jpg",
     name: "Movies",
     createdBy: users[2]._id
   },
@@ -90,8 +76,7 @@ const fandomCategories: IFandomCategory[] = [
   },
   {
     _id: new mongoose.Types.ObjectId(),
-    backgroundURL:
-      "https://www.canvasandwall.co.za/wp-content/uploads/2020/04/TV-Background-3D-wallpaper.jpg",
+    backgroundURL: "https://www.canvasandwall.co.za/wp-content/uploads/2020/04/TV-Background-3D-wallpaper.jpg",
     name: "Shows",
     createdBy: users[2]._id
   },
@@ -182,8 +167,7 @@ const fandoms: IFandom[] = [
     _id: new mongoose.Types.ObjectId(),
     category: fandomCategories[1]._id,
     name: "Harry Potter",
-    backgroundURL:
-      "https://i.pinimg.com/originals/9e/79/90/9e799033d6cc8983b902cb9a7c41b74c.jpg",
+    backgroundURL: "https://i.pinimg.com/originals/9e/79/90/9e799033d6cc8983b902cb9a7c41b74c.jpg",
     createdBy: users[1]._id,
     createdAt: new Date(2020, 9, 7)
   },
@@ -223,8 +207,7 @@ const fandoms: IFandom[] = [
     _id: new mongoose.Types.ObjectId(),
     category: fandomCategories[3]._id,
     name: "Yu Gi Oh",
-    backgroundURL:
-      "https://i.pinimg.com/originals/d1/7a/d8/d17ad80144ef56adbf58a17a686ea619.jpg",
+    backgroundURL: "https://i.pinimg.com/originals/d1/7a/d8/d17ad80144ef56adbf58a17a686ea619.jpg",
     createdBy: users[1]._id,
     createdAt: new Date(2020, 9, 7)
   },
@@ -240,8 +223,7 @@ const fandoms: IFandom[] = [
     _id: new mongoose.Types.ObjectId(),
     category: fandomCategories[3]._id,
     name: "Beyblade",
-    backgroundURL:
-      "https://i.pinimg.com/originals/2c/ae/46/2cae460058ec18fa42d5a3c07589b781.jpg",
+    backgroundURL: "https://i.pinimg.com/originals/2c/ae/46/2cae460058ec18fa42d5a3c07589b781.jpg",
     createdBy: users[1]._id,
     createdAt: new Date(2020, 4, 7)
   },
@@ -249,8 +231,7 @@ const fandoms: IFandom[] = [
     _id: new mongoose.Types.ObjectId(),
     category: fandomCategories[4]._id,
     name: "Call of Duty",
-    backgroundURL:
-      "https://i.pinimg.com/originals/c4/88/a5/c488a5045bf7ac2d08b8bd9342cecf92.jpg",
+    backgroundURL: "https://i.pinimg.com/originals/c4/88/a5/c488a5045bf7ac2d08b8bd9342cecf92.jpg",
     createdBy: users[0]._id,
     createdAt: new Date(2020, 7, 7)
   },
@@ -266,8 +247,7 @@ const fandoms: IFandom[] = [
     _id: new mongoose.Types.ObjectId(),
     category: fandomCategories[4]._id,
     name: "Assassin's Creed",
-    backgroundURL:
-      "https://i.pinimg.com/originals/80/d9/89/80d98924b54c6ff8b8438cc30ea1e694.jpg",
+    backgroundURL: "https://i.pinimg.com/originals/80/d9/89/80d98924b54c6ff8b8438cc30ea1e694.jpg",
     createdBy: users[0]._id,
     createdAt: new Date(2020, 12, 7)
   },
@@ -283,8 +263,7 @@ const fandoms: IFandom[] = [
     _id: new mongoose.Types.ObjectId(),
     category: fandomCategories[5]._id,
     name: "Basketball",
-    backgroundURL:
-      "https://i.pinimg.com/originals/dc/eb/80/dceb80db40569f060a1197d7f8c58916.jpg",
+    backgroundURL: "https://i.pinimg.com/originals/dc/eb/80/dceb80db40569f060a1197d7f8c58916.jpg",
     createdBy: users[1]._id,
     createdAt: new Date(2016, 1, 7)
   },
@@ -340,7 +319,7 @@ const events: IEvent[] = [
     description: `A comic book convention or comic con is an event with a primary focus on comic books and comic book culture, in which comic book fans gather to meet creators, experts, and each other. Commonly, comic conventions are multi-day events hosted at convention centers, hotels, or college campuses.`,
     postedBy: users[0],
     location: "Toronto, Ontario, Canada",
-    startDate: new Date(2021, 10, 12),
+    startDate: new Date(2023, 10, 12),
     endDate: new Date(2021, 10, 14)
   },
   {
@@ -350,7 +329,7 @@ const events: IEvent[] = [
     description: `Our once-in-a-lifetime celebration – the largest event ever staged in the Arab world – is set to welcome 190 participating countries, and millions of visitors from across the globe. Here they will experience warm Emirati hospitality at its finest, as well as the UAE’s values of inclusion, tolerance and cooperation. Youth are at the heart of our World Expo. That’s why Expo 2020 aspires to create a meaningful legacy that will benefit generations to come, both locally and globally, spanning everything from innovations and architecture to friendships and business opportunities.`,
     postedBy: users[1],
     location: "Dubai, UAE",
-    startDate: new Date(2021, 5, 12),
+    startDate: new Date(2023, 5, 12),
     endDate: new Date(2021, 5, 14)
   },
   {
@@ -360,7 +339,7 @@ const events: IEvent[] = [
     description: `Marvel Studios, LLC is an American film and television studio that is a subsidiary of Walt Disney Studios, a division of The Walt Disney Company. Marvel Studios is known for the production of the Marvel Cinematic Universe films, based on characters that appear in Marvel Comics publications.`,
     postedBy: users[1],
     location: "San Fransico, California, USA",
-    startDate: new Date(2021, 6, 12),
+    startDate: new Date(2023, 6, 12),
     endDate: new Date(2021, 7, 14)
   },
   {
@@ -370,7 +349,7 @@ const events: IEvent[] = [
     description: `God of War is an action-adventure game franchise created by David Jaffe at Sony's Santa Monica Studio. It began in 2005 on the PlayStation 2 video game console, and has become a flagship title for the PlayStation brand, consisting of eight games across multiple platforms with a ninth currently in development.`,
     postedBy: users[1],
     location: "Los Angeles, California, USA",
-    startDate: new Date(2021, 4, 8),
+    startDate: new Date(2023, 4, 8),
     endDate: new Date(2021, 4, 11)
   },
   {
@@ -380,7 +359,7 @@ const events: IEvent[] = [
     description: `Harry Potter is a series of seven fantasy novels written by British author, J. K. Rowling. The novels chronicle the lives of a young wizard, Harry Potter, and his friends Hermione Granger and Ron Weasley, all of whom are students at Hogwarts School of Witchcraft and Wizardry.`,
     postedBy: users[0],
     location: "Vancouver, British Columbia, Canada",
-    startDate: new Date(2021, 9, 12),
+    startDate: new Date(2023, 9, 12),
     endDate: new Date(2021, 9, 15)
   },
   {
@@ -390,7 +369,7 @@ const events: IEvent[] = [
     description: `One-Punch Man is a Japanese superhero franchise created by the artist ONE. It tells the story of Saitama, a superhero who can defeat any opponent with a single punch but seeks to find a worthy opponent after growing bored by a lack of challenge due to his overwhelming strength.`,
     postedBy: users[1],
     location: "New York City, New York, USA",
-    startDate: new Date(2021, 7, 30),
+    startDate: new Date(2023, 7, 30),
     endDate: new Date(2021, 8, 1)
   },
   {
@@ -400,7 +379,7 @@ const events: IEvent[] = [
     description: `The FIFA World Cup, often simply called the World Cup, is an international association football competition contested by the senior men's national teams of the members of the Fédération Internationale de Football Association, the sport's global governing body.`,
     postedBy: users[1],
     location: "Westminister, London, United Kingdom",
-    startDate: new Date(2021, 11, 3),
+    startDate: new Date(2023, 11, 3),
     endDate: new Date(2021, 11, 8)
   },
   {
@@ -410,7 +389,7 @@ const events: IEvent[] = [
     description: `Home Box Office is an American pay television network owned by WarnerMedia Studios & Networks and the flagship property of parent subsidiary Home Box Office, Inc.`,
     postedBy: users[0],
     location: "Seattle, Washington, USA",
-    startDate: new Date(2021, 12, 10),
+    startDate: new Date(2023, 12, 10),
     endDate: new Date(2021, 12, 13)
   }
 ];
