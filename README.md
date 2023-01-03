@@ -2,9 +2,8 @@
 
 A site where users can attend events created by others users, give reviews for those events, and come together to discuss topics such as movies, technology, books and much more.
 
-- [What app looks like](#what-app-looks-like)
+- [Preview](#Preview)
 - [Features](#features)
-- [Dependencies](#dependencies)
 - [Running locally](#running-locally)
 
 ## What app looks like
@@ -37,24 +36,6 @@ A site where users can attend events created by others users, give reviews for t
   - Users can view all the events they are planning to attend in a calendar
 - Search
   - Users can view the profiles of other users (i.e. events user is planning to attend, fandoms user has joined, and user details)
-
-## Dependencies
-
-- [Nodejs](https://nodejs.org/en/download/)
-  - NPM should be installed after installing Node
-- [Docker Desktop](https://www.docker.com/products/docker-desktop)
-  - Will be required to run dev branch
-- [MongoDB](https://www.mongodb.com/try/download/community)
-  - Required if you don't want to use Docker
-- [MongoDB Compass](https://www.mongodb.com/try/download/compass)
-  - GUI for MongoDB
-
-Main NPM dependencies:
-
-- express
-- mongoose
-- angular material
-- passport js
 
 ## Running locally
 
