@@ -6,7 +6,7 @@ A site where users can attend events created by others users, give reviews for t
 - [Features](#features)
 - [Running locally](#running-locally)
 
-## What app looks like
+## Preview
 
 <img src="pictures/Login_Page.png" title="Login Page" width="48%"> <img src="pictures/Reset_Password_Page.png" title="Reset Password Page" width="48%">
 <img src="pictures/Profile_Page.png" title="Profile Page" width="48%"> <img src="pictures/Calendar_Page.png" title="Calendar Page" width="48%">
