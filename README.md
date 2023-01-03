@@ -9,7 +9,7 @@ A site where users can attend events created by others users, give reviews for t
 ## Preview
 
 <img src="pictures/Login_Page.png" title="Login Page" width="48%"> <img src="pictures/Reset_Password_Page.png" title="Reset Password Page" width="48%">
-<img src="pictures/Profile_Page.png" title="Profile Page" width="48%"> <img src="pictures/Calendar_Page.png" title="Calendar Page" width="48%">
+<img src="pictures/Profile.png" title="Profile Page" width="48%"> <img src="pictures/Calendar_Page.png" title="Calendar Page" width="48%">
 <img src="pictures/Events_Detail_Page.png" title="Event Details Page" width="48%"> <img src="pictures/Fandoms_Page.png" title="Fandoms Page" width="48%">
 
 ## Features
